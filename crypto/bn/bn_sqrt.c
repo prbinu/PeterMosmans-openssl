@@ -365,7 +365,7 @@ BIGNUM *BN_mod_sqrt(BIGNUM *in, const BIGNUM *a, const BIGNUM *p, BN_CTX *ctx)
         }
         /* If not found, a is not a square or p is not prime. */
         if (i >= e) {
-            ERR_raise(ERR_LIB_BN, BN_R_NOT_A_SQUARE);
+            BNerr(BN_F_BN_MOD_SQRT, BN_R_NOT_A_SQUARE);
             goto end;
         }
 
